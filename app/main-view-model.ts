@@ -1,5 +1,5 @@
 import { Observable } from '@nativescript/core';
-import 'nativescript-sound';
+import { TNSPlayer } from 'nativescript-audio';
 
 interface ListItem {
   text: string;
@@ -42,7 +42,15 @@ export class HelloWorldModel extends Observable {
     return '4:00';
   }
 
-  public onTap(args) {
-    alert('hello');
+  public async onTap(args) {
+    const f = '~/button83.mp3';
+    const p = new TNSPlayer();
+    p.debug = true;
+    console.log(f);
+
+    await p.playFromFile({ audioFile: f, loop: false }).catch((err) => {
+      console.log('error playFromFile');
+      console.log(err);
+    });
   }
 }

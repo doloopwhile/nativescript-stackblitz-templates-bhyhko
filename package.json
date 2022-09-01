@@ -6,8 +6,7 @@
   "dependencies": {
     "@nativescript/core": "~8.3.0",
     "@nativescript/theme": "~3.0.2",
-    "nativescript-sound": "~1.0.4",
-    "nativescript-sound-kak": "^1.2.0"
+    "nativescript-audio": "^6.2.6"
   },
   "devDependencies": {
     "@nativescript/preview-cli": "1.0.1",

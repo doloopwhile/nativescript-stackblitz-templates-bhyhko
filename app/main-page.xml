@@ -21,7 +21,7 @@
         </Repeater>
 
         <Label text="タイマー" class="header" textWrap="true"/>
-        <Button text="4分" class="-primary" hidden="{{!showStartButton}}"/>
+        <Button text="4分" class="-primary" hidden="{{!showStartButton}}" tap="{{onTap}}"/>
         <Label text="{{time}}" class="time" textWrap="true" hidden="{{!showTime}}"/>
     </StackLayout>
 </Page>
