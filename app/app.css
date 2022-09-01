@@ -1,0 +1,32 @@
+@import '@nativescript/theme/css/core.css';
+@import '@nativescript/theme/css/default.css';
+
+Page {
+  font-size: 16;
+}
+
+Button.-primary {
+  font-size: 18;
+}
+
+Button.time {
+}
+
+Label.time {
+  font-size: 24;
+  text-align: center;
+  background-color: white;
+  color: hsl(0, 0%, 5%);
+  margin-left: 64;
+  margin-right: 64;
+  padding-top: 12;
+  padding-bottom: 12;
+}
+
+Label.header {
+  font-size: 24;
+  margin-top: 24;
+  border-bottom-color: white;
+  border-bottom-width: 1px;
+  text-align: center;
+}

@@ -1,0 +1,27 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" navigatingTo="navigatingTo">
+    <ActionBar title="My App" icon="" />
+
+    <StackLayout class="p-20">
+        <Image src="{{ image }}" stretch="aspectFit" height="30%"/>
+
+        <Label text="レシピ" class="header" textWrap="true"/>
+
+        <Repeater items="{{ ingredients }}">
+            <Repeater.itemTemplate>
+                <Label text="{{ text }}" textWrap="true"/>
+            </Repeater.itemTemplate>
+        </Repeater>
+
+        <Label text="淹れ方" class="header" />
+
+        <Repeater items="{{ steps }}">
+            <Repeater.itemTemplate>
+                <Label text="{{ text }}" textWrap="true"/>
+            </Repeater.itemTemplate>
+        </Repeater>
+
+        <Label text="タイマー" class="header" textWrap="true"/>
+        <Button text="4分" class="-primary" hidden="{{!showStartButton}}"/>
+        <Label text="{{time}}" class="time" textWrap="true" hidden="{{!showTime}}"/>
+    </StackLayout>
+</Page>
